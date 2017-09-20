@@ -52,7 +52,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
             <div class="c-content">
                 <div class="Feed">
@@ -76,7 +75,63 @@
                             <span class="AuthorInfo-name">
                                 匿名用户
                             </span>
+                            <div class="authordec">
+                                <div class="HoverCard">
+                                    <div class="HoverCard-titleContainer">
+                                        <img class="Avatar" width="68" height="68" src="https://pic4.zhimg.com/v2-523551d235c995cc0818e97bce167803_im.jpg" srcset="https://pic4.zhimg.com/v2-523551d235c995cc0818e97bce167803_xl.jpg 2x">
+                                        <div class="HoverCard-titleText">
+                                            <div class="HoverCard-title">
+                                                <a href="/people/guan-shan-xue-leng">关山雪冷</a>
+                                            </div>
+                                            <div class="HoverCard-subtitle">
+                                                <span class="RichText">是你的小可爱(⁎⁍̴̛ᴗ⁍̴̛⁎)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="HoverCard-item">
+                                        <div class="NumberBoard">
+                                            <a class="NumberBoard-item" type="button" href="/people/guan-shan-xue-leng/answers">
+                                                <div class="NumberBoard-name">回答</div>
+                                                <div class="NumberBoard-value">16</div>
+                                            </a>
+                                            <a class="NumberBoard-item" type="button" href="/people/guan-shan-xue-leng/posts">
+                                                <div class="NumberBoard-name">文章</div>
+                                                <div class="NumberBoard-value">0</div>
+                                            </a>
+                                            <a class="NumberBoard-item" type="button" href="/people/guan-shan-xue-leng/followers">
+                                                <div class="NumberBoard-name">关注者</div>
+                                                <div class="NumberBoard-value">1839</div>
+                                            </a>
+                                        </div>
+                                        <div class="MemberButtonGroup">
+                                            <button class="FollowButton" type="button">
+                                                <svg viewBox="0 0 12 12" class="Icon FollowButton-icon Icon--plus" width="12" height="16" aria-hidden="true" style="height: 16px; width: 12px;">
+                                                    <title></title>
+                                                    <g>
+                                                        <path d="M6.994 4.994s-.008-3.593 0-4C6.97-.33 4.97-.33 4.996.994c-.025 1.275 0 4 0 4H1C-.334 5-.334 7 1 7c1.332 0 3.996-.006 3.996-.006v4c0 1.346 2.004 1.346 1.998 0-.006-1.347 0-4 0-4S9.658 7 10.997 7c1.338 0 1.338-2-.007-2.006H6.994z"></path>
+                                                    </g>
+                                                </svg>
+                                                关注她
+
+                                            </button>
+                                            <button class="normalButton" type="button">
+                                                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="Icon Button-icon Icon--comments" width="15" height="16" aria-hidden="true" style="height: 16px; width: 15px;">
+                                                    <title></title>
+                                                    <g>
+                                                        <g>
+                                                            <path d="M9 0C3.394 0 0 4.13 0 8c0 1.654.522 3.763 2.014 5.566.314.292.518.82.454 1.17-.165 1.488-.842 1.905-.842 1.905-.328.332.105.67.588.582 1.112-.2 2.07-.58 3.526-1.122.4-.202.464-.147.78-.078C11.524 17.764 18 14 18 8c0-3.665-3.43-8-9-8z"></path>
+                                                            <path d="M19.14 9.628c.758.988.86 2.01.86 3.15 0 1.195-.62 3.11-1.368 3.938-.21.23-.354.467-.308.722.12 1.073.614 1.5.614 1.5.237.24-.188.563-.537.5-.802-.145-1.494-.42-2.545-.81-.29-.146-.336-.106-.563-.057-2.043.712-4.398.476-6.083-.926 5.964-.524 8.726-3.03 9.93-8.016z"></path>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                <span>发私信</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </span>
+
                     </div>
                     <div class="ContentItem">
                         <h2 class="ContentItem-title">
@@ -110,10 +165,11 @@
 <script>
 import Cactions from './cactions.vue';
 export default {
-    components:{
+    components: {
         Cactions
     }
 }
+
 </script>
 <style lang="less">
 .contents-main {
@@ -158,7 +214,9 @@ export default {
                 line-height: 24px;
                 display: flex;
                 align-items: center;
+                position: relative;
                 .UserLink {
+                    position: relative;
                     img {
                         vertical-align: middle;
                         border-radius: 2px;
@@ -172,6 +230,127 @@ export default {
                         margin-left: 10px;
                         vertical-align: middle;
                         font-size: 14px;
+                    }
+                    .authordec {
+                        position: absolute;
+                        top:50px;
+                        display:block;
+                        z-index: 988;
+                        width: 360px;
+                        // height: 213px;
+                        font-size: 15px;
+                        color: #262626;
+                        a {
+                            text-decoration: none;
+                            color: #262626;
+                        }
+                        .HoverCard {
+                            width: 360px;
+                            height: 193px;
+                            background: #fff;
+                            border: 1px solid #e7eaf1;
+                            border-radius: 4px;
+                            box-sizing: border-box;
+                            padding: 0 12px 16px;
+                            box-shadow: 0 5px 20px rgba(0, 34, 77, .1);
+                            font-size: 14px;
+                            opacity: 1;
+                            .HoverCard-titleContainer {
+                                position: relative;
+                                display: flex;
+                                padding: 8px 0;
+                                border-bottom: 1px solid #f0f2f7;
+                                align-items: center;
+                                img {
+                                    position: absolute;
+                                    top: -20px;
+                                    border: 2px solid #fff;
+                                    border-radius: 4px;
+                                }
+                                .HoverCard-titleText {
+                                    display: flex;
+                                    min-height: 42px;
+                                    margin-left: 84px;
+                                    padding-bottom: 2px;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    overflow: hidden;
+                                    flex: 1;
+                                    .HoverCard-title {
+                                        font-size: 16px;
+                                        font-weight: 500;
+                                        overflow: hidden;
+                                        white-space: nowrap;
+                                    }
+                                    .HoverCard-subtitle {
+                                        white-space: nowrap;
+                                        text-overflow: ellipsis;
+                                        overflow: hidden;
+                                    }
+                                }
+                            }
+                            .HoverCard-item {
+                                padding: 8px 16px;
+                                text-align: center;
+                                border: 0;
+                                line-height: 1.75;
+                                .NumberBoard {
+                                    display: flex;
+                                    align-items: center;
+                                    text-align: center;
+                                    .NumberBoard-item{
+                                        flex: 1;
+                                        color: #8590a6;
+                                        cursor: pointer;
+                                        .NumberBoard-name{
+                                            font-size: 14px;
+                                            line-height: 20px;
+                                        }
+                                        .NumberBoard-value{
+                                            font-size: 18px;
+                                            margin-top: 4px;
+                                            font-weight: 500;
+                                            line-height: 24px;
+                                            color:#262626;
+                                        }
+                                    }
+                                }
+                                .MemberButtonGroup{
+                                    margin-top: 16px;
+                                    .FollowButton{
+                                        width: 144px;
+                                        background:#0f88eb;
+                                        color: #fff;
+                                        border:1px solid #0f88eb;
+                                        padding: 0 16px;
+                                        line-height: 32px;
+                                        font-size: 14px;
+                                        cursor: pointer;
+                                        border-radius: 3px;
+                                        svg{
+                                            fill: #fff;
+                                            vertical-align: text-bottom;
+                                        }
+                                    }
+                                    .normalButton{
+                                        margin-left: 9px;
+                                        width: 144px;
+                                        background:#fff;
+                                        color: #8590a6;
+                                        border:1px solid #8590a6;
+                                        padding: 0 16px;
+                                        line-height: 32px;
+                                        font-size: 14px;
+                                        cursor: pointer;
+                                        border-radius: 3px;
+                                        svg{
+                                            fill: #8590a6;
+                                            vertical-align: text-bottom;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -219,7 +398,6 @@ export default {
                         }
                     }
                 }
-                
             }
         }
     }

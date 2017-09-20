@@ -76,6 +76,27 @@
                 </g>
             </svg>
         </button>
+        <div class="collect">
+            <div class="collectbg"></div>
+            <div class="collect-modal">
+                <div class="modal-inner">
+                    <h3 class="modal-title">添加收藏</h3>
+                    <div class="modal-subtitle">你可以创建多个收藏夹，将答案分类收藏</div>
+                    <div class="modal-content">
+                        <button class="colbtn">创建收藏夹</button>
+                        <button class="cancle">取消</button>
+                    </div>
+                </div>
+                <button class="Modal-closeButton" aria-label="关闭" type="button">
+                    <svg viewBox="0 0 14 14" class="Icon Modal-closeIcon Icon--remove" width="16" height="16" aria-hidden="true" style="height: 16px; width: 16px;">
+                        <title></title>
+                        <g>
+                            <path d="M8.486 7l5.208-5.207c.408-.408.405-1.072-.006-1.483-.413-.413-1.074-.413-1.482-.005L7 5.515 1.793.304C1.385-.103.72-.1.31.31-.103.724-.103 1.385.305 1.793L5.515 7l-5.21 5.207c-.407.408-.404 1.072.007 1.483.413.413 1.074.413 1.482.005L7 8.485l5.207 5.21c.408.407 1.072.404 1.483-.007.413-.413.413-1.074.005-1.482L8.485 7z"></path>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+        </div>
     </div>
 </template>
 <style lang="less">
@@ -86,6 +107,114 @@
     font-size: 15px;
     color: #555;
     position: relative;
+    .collect {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 999;
+        display: flex;
+        .collectbg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 0;
+            background: rgba(0, 0, 0, .45);
+            width: 100%;
+            height: 100%;
+        }
+        .collect-modal {
+            width: 536px;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            justify-content: center;
+            overflow-x: hidden;
+            overflow-y: auto;
+            font-size: 15px;
+            color: #262626; //box-shadow:0 5px 20px 0 rgba(0,34,77,.5);
+            box-sizing: border-box;
+            .modal-inner {
+                overflow: auto;
+                background: #fff;
+                border-radius: 2px;
+                text-align: center;
+                .modal-title {
+                    font-size: 24px;
+                    font-weight: 500;
+                    color: #262626;
+                    margin-top: 40px;
+                }
+                .modal-subtitle {
+                    //padding:0 38px;
+                    margin-top: -6px;
+                    font-size: 14px;
+                    line-height: 1.5;
+                    color: #8590a6;
+                }
+                .modal-content {
+                    // display: flex;
+                    // flex-direction: column;
+                    // justify-content: center;
+                    flex: 1;
+                    padding: 0 24px 32px;
+                    margin-top: 40px;
+                    line-height: 1.7;
+                    opacity: 1;
+
+                    .colbtn {
+                        width: 220px;
+                        display: block;
+                        margin: 0 auto;
+                        background: #0f88eb;
+                        border: 1px solid #0f88eb;
+                        color: #fff;
+                        padding: 0 16px;
+                        line-height: 32px;
+                        border-radius: 3px;
+                    }
+                    .cancle {
+                        width: 220px;
+                        display: block;
+                        margin: 0 auto;
+                        margin-top: 28px;
+                        margin-bottom: 16px;
+                        background: #fff;
+                        border: 1px solid #ccd8e1;
+                        color: #8590a6;
+                        padding: 0 16px;
+                        line-height: 32px;
+                        border-radius: 3px;
+                    }
+                }
+            }
+            .Modal-closeButton {
+                position: absolute;
+                top: 18px;
+                right: 60px;
+
+                padding: 12px;
+                height: auto;
+                border: none;
+                display: inline-block;
+                font-size: 14px;
+                color: #8590a6;
+                text-align: center;
+                //cursor: pointer;
+                background: none;
+                svg {
+                    vertical-align: top;
+                    fill: #fff;
+                    border: 1px solid red;
+                }
+            }
+        }
+    }
     span,
     .LikeButton {
         height: 32px;
@@ -126,7 +255,7 @@
             fill: #9fadc7;
         }
     }
-    .packup{
+    .packup {
         height: 52px;
         line-height: 52px;
         margin-left: 24px;
@@ -136,7 +265,7 @@
         background: none;
         color: #8590a6;
         position: absolute;
-        right:0;
+        right: 0;
         svg {
             vertical-align: text-bottom;
             fill: #9fadc7;

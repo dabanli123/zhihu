@@ -27,7 +27,7 @@
     .headers-box{
         height: 52px;
         position: fixed;
-        z-index: 999;
+        z-index: 989;
         top:0;
         left: 0;
         width:100%;
