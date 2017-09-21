@@ -107,6 +107,7 @@
     font-size: 15px;
     color: #555;
     position: relative;
+    cursor: pointer;
     .collect {
         position: fixed;
         top: 0;
@@ -114,7 +115,7 @@
         bottom: 0;
         left: 0;
         z-index: 999;
-        display: flex;
+        display: none;
         .collectbg {
             position: absolute;
             top: 0;
@@ -228,6 +229,7 @@
             border: 1px solid #ccd8e1;
             background: #ebf3fb;
             border-color: #ebf3fb;
+            cursor: pointer;
             svg {
                 vertical-align: text-bottom;
                 fill: #2d84cc;
@@ -250,6 +252,7 @@
         text-align: center;
         background: none;
         color: #8590a6;
+        cursor: pointer;
         svg {
             vertical-align: text-bottom;
             fill: #9fadc7;
@@ -266,6 +269,7 @@
         color: #8590a6;
         position: absolute;
         right: 0;
+        cursor: pointer;
         svg {
             vertical-align: text-bottom;
             fill: #9fadc7;
