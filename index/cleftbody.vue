@@ -1,6 +1,6 @@
 <template>
     <div class="contents-main">
-        <div>
+        <div>2
             <div class="c-content">
                 <div class="Feed">
                     <div class="Feed-title">
