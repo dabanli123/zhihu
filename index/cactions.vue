@@ -1,6 +1,6 @@
 <template>
     <div class="ContentItem-actions">
-        <span>
+        <span>11
             <button class="VoteButton--up" aria-label="赞同" type="button">
                 <svg viewBox="0 0 20 18" class="Icon VoteButton-upIcon Icon--triangle" width="9" height="16" aria-hidden="true" style="height: 16px; width: 9px;">
                     <title></title>
